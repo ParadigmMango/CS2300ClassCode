@@ -1,0 +1,122 @@
+\hypertarget{float__compare_8hpp}{}\doxysection{float\+\_\+compare.\+hpp File Reference}
+\label{float__compare_8hpp}\index{float\_compare.hpp@{float\_compare.hpp}}
+
+
+Handles floating point errors.  
+
+
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{float__compare_8hpp_a5964f2573c9f5aa81c50826dfac3cb81}{Equals\+Within\+Tolerance}} (const double \&num\+\_\+1, const double \&num\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Compares doubles in a manner similar to equals but with a tolerance. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{float__compare_8hpp_ab35942669ec9351e073add9851717fd6}{Equals\+Within\+Tolerance}} (const Eigen\+::\+Matrix2d \&mat\+\_\+1, const Eigen\+::\+Matrix2d \&mat\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Compares arrays with a tolerance to check for equality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{float__compare_8hpp_afb37917bc1ddaac2ce1c27e40f185736}{Equals\+Within\+Tolerance}} (const Eigen\+::\+Vector2d \&vec\+\_\+1, const Eigen\+::\+Vector2d \&vec\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Compares 2D vectors with a tolerance check for equality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{float__compare_8hpp_ab67553848ff5b7607944a537f19b00b6}{Equals\+Within\+Tolerance}} (const Eigen\+::\+Vector3d \&vec\+\_\+1, const Eigen\+::\+Vector3d \&vec\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Compares 3D vectors with a tolerance check for equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{float__compare_8hpp_aa2d67d0fd80a7cd337894511fc10df11}\label{float__compare_8hpp_aa2d67d0fd80a7cd337894511fc10df11}} 
+const double \mbox{\hyperlink{float__compare_8hpp_aa2d67d0fd80a7cd337894511fc10df11}{k\+Tolerance}} = 0.\+00000000000001
+\begin{DoxyCompactList}\small\item\em The tolerance used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles floating point errors. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Hartt (\href{mailto:jacobjhartt@gmail.com}{\texttt{ jacobjhartt@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/10-\/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{float__compare_8hpp_a5964f2573c9f5aa81c50826dfac3cb81}\label{float__compare_8hpp_a5964f2573c9f5aa81c50826dfac3cb81}} 
+\index{float\_compare.hpp@{float\_compare.hpp}!EqualsWithinTolerance@{EqualsWithinTolerance}}
+\index{EqualsWithinTolerance@{EqualsWithinTolerance}!float\_compare.hpp@{float\_compare.hpp}}
+\doxysubsubsection{\texorpdfstring{EqualsWithinTolerance()}{EqualsWithinTolerance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Equals\+Within\+Tolerance (\begin{DoxyParamCaption}\item[{const double \&}]{num\+\_\+1,  }\item[{const double \&}]{num\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Compares doubles in a manner similar to equals but with a tolerance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+1} & the first number to be compared \\
+\hline
+{\em num\+\_\+2} & the second number to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the doubles can be considered \char`\"{}equal\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{float__compare_8hpp_ab35942669ec9351e073add9851717fd6}\label{float__compare_8hpp_ab35942669ec9351e073add9851717fd6}} 
+\index{float\_compare.hpp@{float\_compare.hpp}!EqualsWithinTolerance@{EqualsWithinTolerance}}
+\index{EqualsWithinTolerance@{EqualsWithinTolerance}!float\_compare.hpp@{float\_compare.hpp}}
+\doxysubsubsection{\texorpdfstring{EqualsWithinTolerance()}{EqualsWithinTolerance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Equals\+Within\+Tolerance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix2d \&}]{mat\+\_\+1,  }\item[{const Eigen\+::\+Matrix2d \&}]{mat\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Compares arrays with a tolerance to check for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\+\_\+1} & the first matrix to be compared \\
+\hline
+{\em mat\+\_\+2} & the second matrix to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the matrices can be considered \char`\"{}equal\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{float__compare_8hpp_afb37917bc1ddaac2ce1c27e40f185736}\label{float__compare_8hpp_afb37917bc1ddaac2ce1c27e40f185736}} 
+\index{float\_compare.hpp@{float\_compare.hpp}!EqualsWithinTolerance@{EqualsWithinTolerance}}
+\index{EqualsWithinTolerance@{EqualsWithinTolerance}!float\_compare.hpp@{float\_compare.hpp}}
+\doxysubsubsection{\texorpdfstring{EqualsWithinTolerance()}{EqualsWithinTolerance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Equals\+Within\+Tolerance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{vec\+\_\+1,  }\item[{const Eigen\+::\+Vector2d \&}]{vec\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Compares 2D vectors with a tolerance check for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+\_\+1} & the first vector to be compared \\
+\hline
+{\em vec\+\_\+2} & the second vector to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the vectors can be considered \char`\"{}equal\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{float__compare_8hpp_ab67553848ff5b7607944a537f19b00b6}\label{float__compare_8hpp_ab67553848ff5b7607944a537f19b00b6}} 
+\index{float\_compare.hpp@{float\_compare.hpp}!EqualsWithinTolerance@{EqualsWithinTolerance}}
+\index{EqualsWithinTolerance@{EqualsWithinTolerance}!float\_compare.hpp@{float\_compare.hpp}}
+\doxysubsubsection{\texorpdfstring{EqualsWithinTolerance()}{EqualsWithinTolerance()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Equals\+Within\+Tolerance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{vec\+\_\+1,  }\item[{const Eigen\+::\+Vector3d \&}]{vec\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Compares 3D vectors with a tolerance check for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+\_\+1} & the first vector to be compared \\
+\hline
+{\em vec\+\_\+2} & the second vector to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the vectors can be considered \char`\"{}equal\char`\"{} 
+\end{DoxyReturn}

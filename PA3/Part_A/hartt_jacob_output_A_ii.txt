@@ -1,0 +1,2 @@
+[-1,  2]
+Only trivial solution exists

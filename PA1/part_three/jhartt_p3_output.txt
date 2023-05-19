@@ -1,0 +1,9 @@
+[7, 0]
+[1, 8]
+[6, 6]
+73
+0.197396 radians
+[3.2, -6.4]
+Error: invalid input data
+Error: invalid input data
+Error: invalid input data

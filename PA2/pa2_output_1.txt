@@ -1,0 +1,6 @@
+X . . . . 
+O X X O O 
+X X O O O 
+. O O O O 
+O O . . X 
+Player X: 6 cells; Player O: 12 cells

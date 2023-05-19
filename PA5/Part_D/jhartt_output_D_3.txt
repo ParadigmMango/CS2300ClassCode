@@ -1,0 +1,9 @@
+Invalid Computation
+0 [13.75,  15.5,  16.5]
+0 [10, 11, 12]
+Invalid Computation
+Invalid Computation
+Invalid Computation
+0 [100.9, 120.1, 121.1]
+1 [37.25,  43.7,  44.7]
+Invalid Computation

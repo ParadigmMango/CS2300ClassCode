@@ -1,0 +1,156 @@
+\hypertarget{classBoard}{}\doxysection{Board Class Reference}
+\label{classBoard}\index{Board@{Board}}
+
+
+Class representing a square board that contains colored cells.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}\label{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}} 
+\mbox{\hyperlink{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classBoard}{Board}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoard_a2445922d71017c423167710cc698cff5}{Board}} (const unsigned int \&width)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classBoard}{Board}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_ae0081e67459ce928bc086da197907158}{Create\+Grid}} (const unsigned int \&width)
+\begin{DoxyCompactList}\small\item\em Creates the square grid stored in the board object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_a3cb8c4ee69aeeb9371d71d998fd5ad69}{Display}} ()
+\begin{DoxyCompactList}\small\item\em Displays the contents of the board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_af7c93e27b0a21e732144f78cb718ad74}{Plot\+Line}} (const \mbox{\hyperlink{classParametricLine}{Parametric\+Line}} \&line, const char \&color)
+\begin{DoxyCompactList}\small\item\em Draws a parametric line onto the board in a certain color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_ad9803f4b04fe7f4e54733b6528f50a5e}{Write}} (const std\+::string \&write\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Writes the contents of the board and each player\textquotesingle{}s score to a file. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classBoard_a0f351b8cb723ae1b69f9bec04d7ef6df}{Get\+Cell}} (const unsigned int row, const unsigned int col) const
+\begin{DoxyCompactList}\small\item\em Gets a cell\textquotesingle{}s color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_a1fd45f684dae67bac8212a24ee3697c3}{Set\+Cell}} (const char \&color, const unsigned int \&row, const unsigned int \&col)
+\begin{DoxyCompactList}\small\item\em Sets a cell in the Grid object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a square board that contains colored cells. 
+
+The class contains a grid which can display itself, draw lines on itself and count the number cells with a certain color on itself. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBoard_a2445922d71017c423167710cc698cff5}\label{classBoard_a2445922d71017c423167710cc698cff5}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \mbox{\hyperlink{classBoard}{Board}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & the width of the square board \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBoard_ae0081e67459ce928bc086da197907158}\label{classBoard_ae0081e67459ce928bc086da197907158}} 
+\index{Board@{Board}!CreateGrid@{CreateGrid}}
+\index{CreateGrid@{CreateGrid}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{CreateGrid()}{CreateGrid()}}
+{\footnotesize\ttfamily void Board\+::\+Create\+Grid (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the square grid stored in the board object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & the width of the square board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBoard_a3cb8c4ee69aeeb9371d71d998fd5ad69}\label{classBoard_a3cb8c4ee69aeeb9371d71d998fd5ad69}} 
+\index{Board@{Board}!Display@{Display}}
+\index{Display@{Display}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Display()}{Display()}}
+{\footnotesize\ttfamily void Board\+::\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays the contents of the board. 
+
+Iteratively prints the contents of the board. \mbox{\Hypertarget{classBoard_a0f351b8cb723ae1b69f9bec04d7ef6df}\label{classBoard_a0f351b8cb723ae1b69f9bec04d7ef6df}} 
+\index{Board@{Board}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}}
+{\footnotesize\ttfamily char Board\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{const unsigned int}]{row,  }\item[{const unsigned int}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a cell\textquotesingle{}s color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & the row of the cell \\
+\hline
+{\em col} & the column of the cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The color / char of the cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_af7c93e27b0a21e732144f78cb718ad74}\label{classBoard_af7c93e27b0a21e732144f78cb718ad74}} 
+\index{Board@{Board}!PlotLine@{PlotLine}}
+\index{PlotLine@{PlotLine}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{PlotLine()}{PlotLine()}}
+{\footnotesize\ttfamily void Board\+::\+Plot\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classParametricLine}{Parametric\+Line}} \&}]{line,  }\item[{const char \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draws a parametric line onto the board in a certain color. 
+
+The function draws an imaginary line between the midpoints of the cells which form the endpoints of the parametric line and colors in all cells which this imaginary line touches with the input color.
+
+This function implements the Amanatides and Woo Algorithm which is a raytracing algorithm described in detail in the following Git\+Hub document\+: \href{https://github.com/cgyurgyik/fast-voxel-traversal-algorithm/blob/master/overview/FastVoxelTraversalOverview.md}{\texttt{ https\+://github.\+com/cgyurgyik/fast-\/voxel-\/traversal-\/algorithm/blob/master/overview/\+Fast\+Voxel\+Traversal\+Overview.\+md}}
+
+The main limitation of this algorithm is floating point arithmetic errors are cumulated over time. To address this and other issues created by floating point arithmetic errors a tolerance of around 1 $\ast$ 10$^\wedge$-\/12 has been introduced. However, the algorithm will start to produce errors if the line gets longer than around 1000 units.
+
+\begin{DoxyPrecond}{Precondition}
+The input line is valid / can be drawn on the board. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classBoard_a1fd45f684dae67bac8212a24ee3697c3}\label{classBoard_a1fd45f684dae67bac8212a24ee3697c3}} 
+\index{Board@{Board}!SetCell@{SetCell}}
+\index{SetCell@{SetCell}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{SetCell()}{SetCell()}}
+{\footnotesize\ttfamily void Board\+::\+Set\+Cell (\begin{DoxyParamCaption}\item[{const char \&}]{color,  }\item[{const unsigned int \&}]{row,  }\item[{const unsigned int \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets a cell in the Grid object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & the color to set the Cell to \\
+\hline
+{\em row} & the row of the cell \\
+\hline
+{\em col} & the column of the cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBoard_ad9803f4b04fe7f4e54733b6528f50a5e}\label{classBoard_ad9803f4b04fe7f4e54733b6528f50a5e}} 
+\index{Board@{Board}!Write@{Write}}
+\index{Write@{Write}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily void Board\+::\+Write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{write\+\_\+file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes the contents of the board and each player\textquotesingle{}s score to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\+\_\+file\+\_\+path} & the file written to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linear__domination_8cc}{linear\+\_\+domination.\+cc}}\end{DoxyCompactItemize}

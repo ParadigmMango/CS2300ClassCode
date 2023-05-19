@@ -1,0 +1,202 @@
+\hypertarget{part__d_8cc}{}\doxysection{Part\+\_\+\+D/part\+\_\+d.cc File Reference}
+\label{part__d_8cc}\index{Part\_D/part\_d.cc@{Part\_D/part\_d.cc}}
+
+
+PA5 Part D\+: Calculating Line-\/\+Triangle Intersections.  
+
+
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../float\+\_\+compare.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../get\+\_\+points.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../plane.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classParametricLine}{Parametric\+Line}}
+\begin{DoxyCompactList}\small\item\em A class which contains the information for a parametric line in 3D. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTriangle}{Triangle}}
+\begin{DoxyCompactList}\small\item\em A class which tracks and contains various functionality for 3D triangles. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structInput}{Input}}
+\begin{DoxyCompactList}\small\item\em An input data structure to package input information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const Eigen\+::\+IOFormat \mbox{\hyperlink{part__d_8cc_a55184c0c61120166d09ecbdc99f0d0a3}{k\+Sig\+Fig\+Fmt}} (\mbox{\hyperlink{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}}, 0, \char`\"{}, \char`\"{}, \char`\"{} \char`\"{}, \char`\"{}\mbox{[}\char`\"{}, \char`\"{}\mbox{]}\char`\"{})
+\item 
+double \mbox{\hyperlink{part__d_8cc_aff665c908445556a76de91e30c43210d}{Angle\+Between\+Vecs}} (const Eigen\+::\+Vector3d \&vec\+\_\+1, const Eigen\+::\+Vector3d \&vec\+\_\+2)
+\item 
+bool \mbox{\hyperlink{part__d_8cc_af0eeddfeab747ca554346f235b029b11}{Are\+Parallel}} (const Eigen\+::\+Vector3d \&vec\+\_\+1, const Eigen\+::\+Vector3d \&vec\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Compares two vectors to see if they are parallel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{part__d_8cc_a0090d7b18fdff93c6ee299d3f8b49a1e}{Solve\+File}} (const std\+::string \&input\+\_\+path, const std\+::string \&output\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Solves a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInput}{Input}} \mbox{\hyperlink{part__d_8cc_adb6ac8aa5577bff36a78c20120acf801}{Get\+Input}} (const std\+::string \&input\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Generate an input object from an input file. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{part__d_8cc_ad1be411faabe563082d687673ae314c8}{Get\+Intersection}} (\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&plane, \mbox{\hyperlink{classParametricLine}{Parametric\+Line}} \&line)
+\begin{DoxyCompactList}\small\item\em Finds an intersection between the plane and the line. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{part__d_8cc_a16d389071b75ba678f464826ccb143ee}{Intersection\+Exists}} (\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&plane, \mbox{\hyperlink{classParametricLine}{Parametric\+Line}} \&line)
+\begin{DoxyCompactList}\small\item\em Check if an intersection exists between the plane and the line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{part__d_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{part__d_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned int \mbox{\hyperlink{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}} = 4
+\item 
+\mbox{\Hypertarget{part__d_8cc_aee611356891b2478ec3a4ef9f865056c}\label{part__d_8cc_aee611356891b2478ec3a4ef9f865056c}} 
+const std\+::string \mbox{\hyperlink{part__d_8cc_aee611356891b2478ec3a4ef9f865056c}{k\+Invalid\+Computation\+Msg}} = \char`\"{}Invalid Computation\char`\"{}
+\begin{DoxyCompactList}\small\item\em Invalid computation message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PA5 Part D\+: Calculating Line-\/\+Triangle Intersections. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Hartt (\href{mailto:jacobjhartt@gmail.com}{\texttt{ jacobjhartt@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05-\/08-\/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{part__d_8cc_aff665c908445556a76de91e30c43210d}\label{part__d_8cc_aff665c908445556a76de91e30c43210d}} 
+\index{part\_d.cc@{part\_d.cc}!AngleBetweenVecs@{AngleBetweenVecs}}
+\index{AngleBetweenVecs@{AngleBetweenVecs}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{AngleBetweenVecs()}{AngleBetweenVecs()}}
+{\footnotesize\ttfamily double Angle\+Between\+Vecs (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{vec\+\_\+1,  }\item[{const Eigen\+::\+Vector3d \&}]{vec\+\_\+2 }\end{DoxyParamCaption})}
+
+Finds the minimum angle between two vectors using the cosine-\/dot product formula in radians.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+\_\+1} & the first vector \\
+\hline
+{\em vec\+\_\+2} & the second vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle between the vectors in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__d_8cc_af0eeddfeab747ca554346f235b029b11}\label{part__d_8cc_af0eeddfeab747ca554346f235b029b11}} 
+\index{part\_d.cc@{part\_d.cc}!AreParallel@{AreParallel}}
+\index{AreParallel@{AreParallel}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{AreParallel()}{AreParallel()}}
+{\footnotesize\ttfamily bool Are\+Parallel (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{vec\+\_\+1,  }\item[{const Eigen\+::\+Vector3d \&}]{vec\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Compares two vectors to see if they are parallel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+\_\+1} & the first vector \\
+\hline
+{\em vec\+\_\+2} & the second vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the vectors are parallel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__d_8cc_adb6ac8aa5577bff36a78c20120acf801}\label{part__d_8cc_adb6ac8aa5577bff36a78c20120acf801}} 
+\index{part\_d.cc@{part\_d.cc}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInput}{Input}} Get\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Generate an input object from an input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+path} & the path of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An input object which contains the data of the input file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__d_8cc_ad1be411faabe563082d687673ae314c8}\label{part__d_8cc_ad1be411faabe563082d687673ae314c8}} 
+\index{part\_d.cc@{part\_d.cc}!GetIntersection@{GetIntersection}}
+\index{GetIntersection@{GetIntersection}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{GetIntersection()}{GetIntersection()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d Get\+Intersection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&}]{plane,  }\item[{\mbox{\hyperlink{classParametricLine}{Parametric\+Line}} \&}]{line }\end{DoxyParamCaption})}
+
+
+
+Finds an intersection between the plane and the line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane} & the plane \\
+\hline
+{\em line} & the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The intersection point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__d_8cc_a16d389071b75ba678f464826ccb143ee}\label{part__d_8cc_a16d389071b75ba678f464826ccb143ee}} 
+\index{part\_d.cc@{part\_d.cc}!IntersectionExists@{IntersectionExists}}
+\index{IntersectionExists@{IntersectionExists}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{IntersectionExists()}{IntersectionExists()}}
+{\footnotesize\ttfamily bool Intersection\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&}]{plane,  }\item[{\mbox{\hyperlink{classParametricLine}{Parametric\+Line}} \&}]{line }\end{DoxyParamCaption})}
+
+
+
+Check if an intersection exists between the plane and the line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane} & the plane \\
+\hline
+{\em line} & the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the intersection exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__d_8cc_a55184c0c61120166d09ecbdc99f0d0a3}\label{part__d_8cc_a55184c0c61120166d09ecbdc99f0d0a3}} 
+\index{part\_d.cc@{part\_d.cc}!kSigFigFmt@{kSigFigFmt}}
+\index{kSigFigFmt@{kSigFigFmt}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{kSigFigFmt()}{kSigFigFmt()}}
+{\footnotesize\ttfamily const Eigen\+::\+IOFormat k\+Sig\+Fig\+Fmt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}}}]{,  }\item[{0}]{,  }\item[{\char`\"{}}]{,  }\item[{\char`\"{}}]{,  }\item[{\char`\"{} \char`\"{}}]{,  }\item[{\char`\"{}\char`\"{}}]{\mbox{[}\char`\"{}, \char`\"{}\mbox{]} }\end{DoxyParamCaption})}
+
+A format which is used to display output vectors with 4 sig figs. For reference\+: \href{https://eigen.tuxfamily.org/dox/structEigen_1_1IOFormat.html}{\texttt{ https\+://eigen.\+tuxfamily.\+org/dox/struct\+Eigen\+\_\+1\+\_\+1\+IOFormat.\+html}} \mbox{\Hypertarget{part__d_8cc_a0090d7b18fdff93c6ee299d3f8b49a1e}\label{part__d_8cc_a0090d7b18fdff93c6ee299d3f8b49a1e}} 
+\index{part\_d.cc@{part\_d.cc}!SolveFile@{SolveFile}}
+\index{SolveFile@{SolveFile}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{SolveFile()}{SolveFile()}}
+{\footnotesize\ttfamily void Solve\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+path,  }\item[{const std\+::string \&}]{output\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Solves a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+path} & the path of the input file \\
+\hline
+{\em output\+\_\+path} & the path of the output file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}\label{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}} 
+\index{part\_d.cc@{part\_d.cc}!kSigFig@{kSigFig}}
+\index{kSigFig@{kSigFig}!part\_d.cc@{part\_d.cc}}
+\doxysubsubsection{\texorpdfstring{kSigFig}{kSigFig}}
+{\footnotesize\ttfamily const unsigned int k\+Sig\+Fig = 4}
+
+A format which is used to display output vectors with 4 sig figs. The number of sig figs printed in outputs. 

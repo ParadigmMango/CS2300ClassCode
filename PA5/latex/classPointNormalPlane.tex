@@ -1,0 +1,101 @@
+\hypertarget{classPointNormalPlane}{}\doxysection{Point\+Normal\+Plane Class Reference}
+\label{classPointNormalPlane}\index{PointNormalPlane@{PointNormalPlane}}
+
+
+Class representing 3D planes in point-\/normal form.  
+
+
+
+
+{\ttfamily \#include $<$plane.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPointNormalPlane_af97c3dacdc794f9189f940f25211a260}{Point\+Normal\+Plane}} ()
+\item 
+\mbox{\hyperlink{classPointNormalPlane_a4cb5571b8d218acbe19779fbdc395d50}{Point\+Normal\+Plane}} (const Eigen\+::\+Vector3d \&normal\+\_\+vec, const Eigen\+::\+Vector3d \&normal\+\_\+vec\+\_\+tail)
+\begin{DoxyCompactList}\small\item\em Construct a new Point Normal Plane object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classPointNormalPlane_ad8af9b3c9dc2597090f5ed3aba0d25fc}{Find\+Distance\+To\+Point}} (const Eigen\+::\+Vector3d \&point)
+\begin{DoxyCompactList}\small\item\em Finds the minimum distance from the point to the plane. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classPointNormalPlane_a44db0be82b91e40436da44d956cde4e7}{Find\+Closest\+Point}} (const Eigen\+::\+Vector3d \&point)
+\begin{DoxyCompactList}\small\item\em Finds the closest point to another point on the plane. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPointNormalPlane_a786479d16cddfcb31dbdaf777606631f}\label{classPointNormalPlane_a786479d16cddfcb31dbdaf777606631f}} 
+Eigen\+::\+Vector3d {\bfseries Get\+Normal\+Vec} ()
+\item 
+\mbox{\Hypertarget{classPointNormalPlane_af761f393426c5a7342751412380d24ca}\label{classPointNormalPlane_af761f393426c5a7342751412380d24ca}} 
+Eigen\+::\+Vector3d {\bfseries Get\+Normal\+Vec\+Tail} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing 3D planes in point-\/normal form. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPointNormalPlane_af97c3dacdc794f9189f940f25211a260}\label{classPointNormalPlane_af97c3dacdc794f9189f940f25211a260}} 
+\index{PointNormalPlane@{PointNormalPlane}!PointNormalPlane@{PointNormalPlane}}
+\index{PointNormalPlane@{PointNormalPlane}!PointNormalPlane@{PointNormalPlane}}
+\doxysubsubsection{\texorpdfstring{PointNormalPlane()}{PointNormalPlane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Point\+Normal\+Plane\+::\+Point\+Normal\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default construct a new Point Normal Plane object to allow it to be used in the \mbox{\hyperlink{classTriangle}{Triangle}} class as a data member \mbox{\Hypertarget{classPointNormalPlane_a4cb5571b8d218acbe19779fbdc395d50}\label{classPointNormalPlane_a4cb5571b8d218acbe19779fbdc395d50}} 
+\index{PointNormalPlane@{PointNormalPlane}!PointNormalPlane@{PointNormalPlane}}
+\index{PointNormalPlane@{PointNormalPlane}!PointNormalPlane@{PointNormalPlane}}
+\doxysubsubsection{\texorpdfstring{PointNormalPlane()}{PointNormalPlane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Point\+Normal\+Plane\+::\+Point\+Normal\+Plane (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{normal\+\_\+vec,  }\item[{const Eigen\+::\+Vector3d \&}]{normal\+\_\+vec\+\_\+tail }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Point Normal Plane object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em normal\+\_\+vec} & a normal vector to plug in to the plane \\
+\hline
+{\em normal\+\_\+vec\+\_\+tail} & the tail of the normal vector \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPointNormalPlane_a44db0be82b91e40436da44d956cde4e7}\label{classPointNormalPlane_a44db0be82b91e40436da44d956cde4e7}} 
+\index{PointNormalPlane@{PointNormalPlane}!FindClosestPoint@{FindClosestPoint}}
+\index{FindClosestPoint@{FindClosestPoint}!PointNormalPlane@{PointNormalPlane}}
+\doxysubsubsection{\texorpdfstring{FindClosestPoint()}{FindClosestPoint()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d Point\+Normal\+Plane\+::\+Find\+Closest\+Point (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the closest point to another point on the plane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the input point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest point on the plane 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPointNormalPlane_ad8af9b3c9dc2597090f5ed3aba0d25fc}\label{classPointNormalPlane_ad8af9b3c9dc2597090f5ed3aba0d25fc}} 
+\index{PointNormalPlane@{PointNormalPlane}!FindDistanceToPoint@{FindDistanceToPoint}}
+\index{FindDistanceToPoint@{FindDistanceToPoint}!PointNormalPlane@{PointNormalPlane}}
+\doxysubsubsection{\texorpdfstring{FindDistanceToPoint()}{FindDistanceToPoint()}}
+{\footnotesize\ttfamily double Point\+Normal\+Plane\+::\+Find\+Distance\+To\+Point (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the minimum distance from the point to the plane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum distance from the point to the plane 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plane_8hpp}{plane.\+hpp}}\end{DoxyCompactItemize}

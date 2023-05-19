@@ -1,0 +1,67 @@
+\hypertarget{get__points_8hpp}{}\doxysection{get\+\_\+points.\+hpp File Reference}
+\label{get__points_8hpp}\index{get\_points.hpp@{get\_points.hpp}}
+
+
+Retrieves the input from a file and returns an eigen matrix of points.  
+
+
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{get__points_8hpp_a5625498f72f322ff0e3066c5bf6264de}\label{get__points_8hpp_a5625498f72f322ff0e3066c5bf6264de}} 
+typedef std\+::array$<$ Eigen\+::\+Vector3d, \mbox{\hyperlink{get__points_8hpp_a43923575f0f70382f32cf972f7b67afc}{k\+Input\+Cols}} $>$ {\bfseries Input\+Points\+Row}
+\item 
+\mbox{\Hypertarget{get__points_8hpp_a7381480e70998abb2cd0758b4323b22b}\label{get__points_8hpp_a7381480e70998abb2cd0758b4323b22b}} 
+typedef std\+::vector$<$ Input\+Points\+Row $>$ {\bfseries Input\+Points}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Input\+Points \mbox{\hyperlink{get__points_8hpp_a1eefa31a049e96fae1a35cca2e1c2e07}{Get\+Input\+As\+Points}} (const std\+::string \&input\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Formats the input file\textquotesingle{}s data into a matrix of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{get__points_8hpp_a43923575f0f70382f32cf972f7b67afc}\label{get__points_8hpp_a43923575f0f70382f32cf972f7b67afc}} 
+const size\+\_\+t \mbox{\hyperlink{get__points_8hpp_a43923575f0f70382f32cf972f7b67afc}{k\+Input\+Cols}} = 3
+\begin{DoxyCompactList}\small\item\em The number of columns in the input file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Retrieves the input from a file and returns an eigen matrix of points. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Hartt (\href{mailto:jacobjhartt@gmail.com}{\texttt{ jacobjhartt@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05-\/08-\/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{get__points_8hpp_a1eefa31a049e96fae1a35cca2e1c2e07}\label{get__points_8hpp_a1eefa31a049e96fae1a35cca2e1c2e07}} 
+\index{get\_points.hpp@{get\_points.hpp}!GetInputAsPoints@{GetInputAsPoints}}
+\index{GetInputAsPoints@{GetInputAsPoints}!get\_points.hpp@{get\_points.hpp}}
+\doxysubsubsection{\texorpdfstring{GetInputAsPoints()}{GetInputAsPoints()}}
+{\footnotesize\ttfamily Input\+Points Get\+Input\+As\+Points (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Formats the input file\textquotesingle{}s data into a matrix of points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+path} & the path of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A matrix containing the input file\textquotesingle{}s data 
+\end{DoxyReturn}

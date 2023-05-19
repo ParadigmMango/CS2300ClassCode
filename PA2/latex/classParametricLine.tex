@@ -1,0 +1,146 @@
+\hypertarget{classParametricLine}{}\doxysection{Parametric\+Line Class Reference}
+\label{classParametricLine}\index{ParametricLine@{ParametricLine}}
+
+
+Class containing the data and functionality of a parametric line.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classParametricLine_a003a4d30e430758901a693bc60195b5c}{Parametric\+Line}} (const unsigned int \&tail\+\_\+cell\+\_\+x, const unsigned int \&tail\+\_\+cell\+\_\+y, const unsigned int \&head\+\_\+cell\+\_\+x, const unsigned int \&head\+\_\+cell\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Construct a new Parametric Line object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classParametricLine_ad0b97340901741145fc2c91d476c4f88}{Is\+Perpendicular}} (\mbox{\hyperlink{classParametricLine}{Parametric\+Line}} line) const
+\begin{DoxyCompactList}\small\item\em Checks if the line is perpendicular to another line. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}{Point}} \& \mbox{\hyperlink{classParametricLine_aea7e0647013393737d0badc79aff18aa}{Get\+Head\+Cell}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Head Cell object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}{Point}} \& \mbox{\hyperlink{classParametricLine_a06da521ffbf025dbb86eedd018e623da}{Get\+Midpoint}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Midpoint object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}{Point}} \& \mbox{\hyperlink{classParametricLine_a260be67c217df9bb1fa140f2dc30f4a0}{Get\+Tail\+Cell}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Tail Cell object. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector2d \& \mbox{\hyperlink{classParametricLine_a12b4ab9eeab4c82316e9c334e502f046}{Get\+Vector}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Vector object. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector2d \& \mbox{\hyperlink{classParametricLine_a9fc76ec78196034b7ceae95aa349e35f}{Get\+Vector\+Normalized}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Vector Normalized object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing the data and functionality of a parametric line. 
+
+A class containing the head cell, tail cell, head point, tail point, vector, normalized vector and midpoint of a paramtric line.
+
+The class also has the ability to calculate barycentric combinations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classParametricLine_a003a4d30e430758901a693bc60195b5c}\label{classParametricLine_a003a4d30e430758901a693bc60195b5c}} 
+\index{ParametricLine@{ParametricLine}!ParametricLine@{ParametricLine}}
+\index{ParametricLine@{ParametricLine}!ParametricLine@{ParametricLine}}
+\doxysubsubsection{\texorpdfstring{ParametricLine()}{ParametricLine()}}
+{\footnotesize\ttfamily Parametric\+Line\+::\+Parametric\+Line (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{tail\+\_\+cell\+\_\+x,  }\item[{const unsigned int \&}]{tail\+\_\+cell\+\_\+y,  }\item[{const unsigned int \&}]{head\+\_\+cell\+\_\+x,  }\item[{const unsigned int \&}]{head\+\_\+cell\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Parametric Line object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tail\+\_\+cell\+\_\+x} & the x value / row of the tail point \\
+\hline
+{\em tail\+\_\+cell\+\_\+y} & the y value / column of tail point \\
+\hline
+{\em head\+\_\+cell\+\_\+x} & the x value / row of the head point \\
+\hline
+{\em head\+\_\+cell\+\_\+y} & the y value / column of the head point \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classParametricLine_aea7e0647013393737d0badc79aff18aa}\label{classParametricLine_aea7e0647013393737d0badc79aff18aa}} 
+\index{ParametricLine@{ParametricLine}!GetHeadCell@{GetHeadCell}}
+\index{GetHeadCell@{GetHeadCell}!ParametricLine@{ParametricLine}}
+\doxysubsubsection{\texorpdfstring{GetHeadCell()}{GetHeadCell()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}{Point}}\& Parametric\+Line\+::\+Get\+Head\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Head Cell object. 
+
+\begin{DoxyReturn}{Returns}
+The Head Cell object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParametricLine_a06da521ffbf025dbb86eedd018e623da}\label{classParametricLine_a06da521ffbf025dbb86eedd018e623da}} 
+\index{ParametricLine@{ParametricLine}!GetMidpoint@{GetMidpoint}}
+\index{GetMidpoint@{GetMidpoint}!ParametricLine@{ParametricLine}}
+\doxysubsubsection{\texorpdfstring{GetMidpoint()}{GetMidpoint()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}{Point}}\& Parametric\+Line\+::\+Get\+Midpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Midpoint object. 
+
+\begin{DoxyReturn}{Returns}
+The Midpoint object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParametricLine_a260be67c217df9bb1fa140f2dc30f4a0}\label{classParametricLine_a260be67c217df9bb1fa140f2dc30f4a0}} 
+\index{ParametricLine@{ParametricLine}!GetTailCell@{GetTailCell}}
+\index{GetTailCell@{GetTailCell}!ParametricLine@{ParametricLine}}
+\doxysubsubsection{\texorpdfstring{GetTailCell()}{GetTailCell()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}{Point}}\& Parametric\+Line\+::\+Get\+Tail\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Tail Cell object. 
+
+\begin{DoxyReturn}{Returns}
+The Tail Cell object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParametricLine_a12b4ab9eeab4c82316e9c334e502f046}\label{classParametricLine_a12b4ab9eeab4c82316e9c334e502f046}} 
+\index{ParametricLine@{ParametricLine}!GetVector@{GetVector}}
+\index{GetVector@{GetVector}!ParametricLine@{ParametricLine}}
+\doxysubsubsection{\texorpdfstring{GetVector()}{GetVector()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector2d\& Parametric\+Line\+::\+Get\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Vector object. 
+
+\begin{DoxyReturn}{Returns}
+The Vector object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParametricLine_a9fc76ec78196034b7ceae95aa349e35f}\label{classParametricLine_a9fc76ec78196034b7ceae95aa349e35f}} 
+\index{ParametricLine@{ParametricLine}!GetVectorNormalized@{GetVectorNormalized}}
+\index{GetVectorNormalized@{GetVectorNormalized}!ParametricLine@{ParametricLine}}
+\doxysubsubsection{\texorpdfstring{GetVectorNormalized()}{GetVectorNormalized()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector2d\& Parametric\+Line\+::\+Get\+Vector\+Normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Vector Normalized object. 
+
+\begin{DoxyReturn}{Returns}
+The Vector Normalized object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParametricLine_ad0b97340901741145fc2c91d476c4f88}\label{classParametricLine_ad0b97340901741145fc2c91d476c4f88}} 
+\index{ParametricLine@{ParametricLine}!IsPerpendicular@{IsPerpendicular}}
+\index{IsPerpendicular@{IsPerpendicular}!ParametricLine@{ParametricLine}}
+\doxysubsubsection{\texorpdfstring{IsPerpendicular()}{IsPerpendicular()}}
+{\footnotesize\ttfamily bool Parametric\+Line\+::\+Is\+Perpendicular (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classParametricLine}{Parametric\+Line}}}]{line }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the line is perpendicular to another line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & the line with which perpendicularity is being determined \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the lines are perpendicular 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linear__domination_8cc}{linear\+\_\+domination.\+cc}}\end{DoxyCompactItemize}

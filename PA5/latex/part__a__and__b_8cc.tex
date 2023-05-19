@@ -1,0 +1,243 @@
+\hypertarget{part__a__and__b_8cc}{}\doxysection{Part\+\_\+\+A\+\_\+and\+\_\+\+B/part\+\_\+a\+\_\+and\+\_\+b.cc File Reference}
+\label{part__a__and__b_8cc}\index{Part\_A\_and\_B/part\_a\_and\_b.cc@{Part\_A\_and\_B/part\_a\_and\_b.cc}}
+
+
+PA5 Part A and B\+: Calculating 3D projections.  
+
+
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../float\+\_\+compare.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../get\+\_\+points.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../plane.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structInput}{Input}}
+\begin{DoxyCompactList}\small\item\em An input data structure to package input information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const Eigen\+::\+IOFormat \mbox{\hyperlink{part__a__and__b_8cc_a55184c0c61120166d09ecbdc99f0d0a3}{k\+Sig\+Fig\+Fmt}} (\mbox{\hyperlink{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}}, 0, \char`\"{}, \char`\"{}, \char`\"{} \char`\"{}, \char`\"{}\mbox{[}\char`\"{}, \char`\"{}\mbox{]}\char`\"{})
+\item 
+\mbox{\hyperlink{structInput}{Input}} \mbox{\hyperlink{part__a__and__b_8cc_adb6ac8aa5577bff36a78c20120acf801}{Get\+Input}} (const std\+::string \&input\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Generate an input object from an input file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{part__a__and__b_8cc_a2de5315d96fff338736939d99a55f105}{Parallel\+Proj\+Exists}} (\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&plane, const Eigen\+::\+Vector3d \&proj\+\_\+dir)
+\begin{DoxyCompactList}\small\item\em Determines if a parallel projection exists. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{part__a__and__b_8cc_a30ec09156c628e0d8c3fd4abc7add437}{Perspective\+Proj\+Exists}} (\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&plane, const Eigen\+::\+Vector3d \&point)
+\begin{DoxyCompactList}\small\item\em Determines if a perspective projection exists. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{part__a__and__b_8cc_a73864b6cd215264759abd90c1be1cfc8}{Parallel\+Proj}} (\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&plane, const Eigen\+::\+Vector3d \&point, const Eigen\+::\+Vector3d \&proj\+\_\+dir)
+\begin{DoxyCompactList}\small\item\em Projects a point onto a plane with parallel projection. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{part__a__and__b_8cc_a08228a445206537beaf3bfcd699fc0fa}{Perspective\+Proj}} (\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&plane, const Eigen\+::\+Vector3d \&point)
+\begin{DoxyCompactList}\small\item\em Projects a point onto a plane with perspective projection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{part__a__and__b_8cc_a1e6622cf389cf211d9c305c2566d9b51}{Solve\+File}} (const std\+::string \&input\+\_\+path, const std\+::string \&output\+\_\+path\+\_\+a, const std\+::string \&output\+\_\+path\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Solves a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{part__a__and__b_8cc_ab603e92c9a200bfc6d482122e284fc94}{Solve\+PartA}} (\mbox{\hyperlink{structInput}{Input}} \&input, std\+::ofstream \&output\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Solves part A. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{part__a__and__b_8cc_a5b8e0e6c8abd5f21cdcaa5e00ddaebf9}{Solve\+PartB}} (\mbox{\hyperlink{structInput}{Input}} \&input, std\+::ofstream \&output\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Solves part B. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{part__a__and__b_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{part__a__and__b_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned int \mbox{\hyperlink{part__a__and__b_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}} = 4
+\item 
+\mbox{\Hypertarget{part__a__and__b_8cc_ad075c301bdb6dc188c0154556a162043}\label{part__a__and__b_8cc_ad075c301bdb6dc188c0154556a162043}} 
+const Eigen\+::\+Vector3d \mbox{\hyperlink{part__a__and__b_8cc_ad075c301bdb6dc188c0154556a162043}{k\+Zero\+Vec}} = \{0,0,0\}
+\begin{DoxyCompactList}\small\item\em A zero vector for comparison. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{part__a__and__b_8cc_aee611356891b2478ec3a4ef9f865056c}\label{part__a__and__b_8cc_aee611356891b2478ec3a4ef9f865056c}} 
+const std\+::string \mbox{\hyperlink{part__a__and__b_8cc_aee611356891b2478ec3a4ef9f865056c}{k\+Invalid\+Computation\+Msg}} = \char`\"{}Invalid Computation\char`\"{}
+\begin{DoxyCompactList}\small\item\em Invalid computation message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PA5 Part A and B\+: Calculating 3D projections. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Hartt (\href{mailto:jacobjhartt@gmail.com}{\texttt{ jacobjhartt@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05-\/08-\/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{part__a__and__b_8cc_adb6ac8aa5577bff36a78c20120acf801}\label{part__a__and__b_8cc_adb6ac8aa5577bff36a78c20120acf801}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInput}{Input}} Get\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Generate an input object from an input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+path} & the path of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An input object which contains the data of the input file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__a__and__b_8cc_a55184c0c61120166d09ecbdc99f0d0a3}\label{part__a__and__b_8cc_a55184c0c61120166d09ecbdc99f0d0a3}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!kSigFigFmt@{kSigFigFmt}}
+\index{kSigFigFmt@{kSigFigFmt}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{kSigFigFmt()}{kSigFigFmt()}}
+{\footnotesize\ttfamily const Eigen\+::\+IOFormat k\+Sig\+Fig\+Fmt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}}}]{,  }\item[{0}]{,  }\item[{\char`\"{}}]{,  }\item[{\char`\"{}}]{,  }\item[{\char`\"{} \char`\"{}}]{,  }\item[{\char`\"{}\char`\"{}}]{\mbox{[}\char`\"{}, \char`\"{}\mbox{]} }\end{DoxyParamCaption})}
+
+A format which is used to display output vectors with 4 sig figs. For reference\+: \href{https://eigen.tuxfamily.org/dox/structEigen_1_1IOFormat.html}{\texttt{ https\+://eigen.\+tuxfamily.\+org/dox/struct\+Eigen\+\_\+1\+\_\+1\+IOFormat.\+html}} \mbox{\Hypertarget{part__a__and__b_8cc_a73864b6cd215264759abd90c1be1cfc8}\label{part__a__and__b_8cc_a73864b6cd215264759abd90c1be1cfc8}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!ParallelProj@{ParallelProj}}
+\index{ParallelProj@{ParallelProj}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{ParallelProj()}{ParallelProj()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d Parallel\+Proj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&}]{plane,  }\item[{const Eigen\+::\+Vector3d \&}]{point,  }\item[{const Eigen\+::\+Vector3d \&}]{proj\+\_\+dir }\end{DoxyParamCaption})}
+
+
+
+Projects a point onto a plane with parallel projection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane} & the plane to project onto \\
+\hline
+{\em point} & the point to project \\
+\hline
+{\em proj\+\_\+dir} & the direction of the projection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The projected point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__a__and__b_8cc_a2de5315d96fff338736939d99a55f105}\label{part__a__and__b_8cc_a2de5315d96fff338736939d99a55f105}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!ParallelProjExists@{ParallelProjExists}}
+\index{ParallelProjExists@{ParallelProjExists}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{ParallelProjExists()}{ParallelProjExists()}}
+{\footnotesize\ttfamily bool Parallel\+Proj\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&}]{plane,  }\item[{const Eigen\+::\+Vector3d \&}]{proj\+\_\+dir }\end{DoxyParamCaption})}
+
+
+
+Determines if a parallel projection exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane} & the plane being projected onto \\
+\hline
+{\em proj\+\_\+dir} & the direction of the projection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the projection exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__a__and__b_8cc_a08228a445206537beaf3bfcd699fc0fa}\label{part__a__and__b_8cc_a08228a445206537beaf3bfcd699fc0fa}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!PerspectiveProj@{PerspectiveProj}}
+\index{PerspectiveProj@{PerspectiveProj}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{PerspectiveProj()}{PerspectiveProj()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d Perspective\+Proj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&}]{plane,  }\item[{const Eigen\+::\+Vector3d \&}]{point }\end{DoxyParamCaption})}
+
+
+
+Projects a point onto a plane with perspective projection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane} & the plane to project onto \\
+\hline
+{\em point} & the point to project \\
+\hline
+{\em proj\+\_\+dir} & the direction of the projection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The projected point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__a__and__b_8cc_a30ec09156c628e0d8c3fd4abc7add437}\label{part__a__and__b_8cc_a30ec09156c628e0d8c3fd4abc7add437}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!PerspectiveProjExists@{PerspectiveProjExists}}
+\index{PerspectiveProjExists@{PerspectiveProjExists}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{PerspectiveProjExists()}{PerspectiveProjExists()}}
+{\footnotesize\ttfamily bool Perspective\+Proj\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \&}]{plane,  }\item[{const Eigen\+::\+Vector3d \&}]{point }\end{DoxyParamCaption})}
+
+
+
+Determines if a perspective projection exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plane} & the plane being projected onto \\
+\hline
+{\em point} & the point to be projected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the projection exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__a__and__b_8cc_a1e6622cf389cf211d9c305c2566d9b51}\label{part__a__and__b_8cc_a1e6622cf389cf211d9c305c2566d9b51}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!SolveFile@{SolveFile}}
+\index{SolveFile@{SolveFile}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{SolveFile()}{SolveFile()}}
+{\footnotesize\ttfamily void Solve\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+path,  }\item[{const std\+::string \&}]{output\+\_\+path\+\_\+a,  }\item[{const std\+::string \&}]{output\+\_\+path\+\_\+b }\end{DoxyParamCaption})}
+
+
+
+Solves a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+path} & the path of the input file \\
+\hline
+{\em output\+\_\+path\+\_\+a} & the path of the output file for part a \\
+\hline
+{\em output\+\_\+path\+\_\+b} & the path of the output file for part b \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{part__a__and__b_8cc_ab603e92c9a200bfc6d482122e284fc94}\label{part__a__and__b_8cc_ab603e92c9a200bfc6d482122e284fc94}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!SolvePartA@{SolvePartA}}
+\index{SolvePartA@{SolvePartA}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{SolvePartA()}{SolvePartA()}}
+{\footnotesize\ttfamily void Solve\+PartA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structInput}{Input}} \&}]{input,  }\item[{std\+::ofstream \&}]{output\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Solves part A. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input struct \\
+\hline
+{\em output\+\_\+file} & the file stream to write to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{part__a__and__b_8cc_a5b8e0e6c8abd5f21cdcaa5e00ddaebf9}\label{part__a__and__b_8cc_a5b8e0e6c8abd5f21cdcaa5e00ddaebf9}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!SolvePartB@{SolvePartB}}
+\index{SolvePartB@{SolvePartB}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{SolvePartB()}{SolvePartB()}}
+{\footnotesize\ttfamily void Solve\+PartB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structInput}{Input}} \&}]{input,  }\item[{std\+::ofstream \&}]{output\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Solves part B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input struct \\
+\hline
+{\em output\+\_\+file} & the file stream to write to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{part__a__and__b_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}\label{part__a__and__b_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}} 
+\index{part\_a\_and\_b.cc@{part\_a\_and\_b.cc}!kSigFig@{kSigFig}}
+\index{kSigFig@{kSigFig}!part\_a\_and\_b.cc@{part\_a\_and\_b.cc}}
+\doxysubsubsection{\texorpdfstring{kSigFig}{kSigFig}}
+{\footnotesize\ttfamily const unsigned int k\+Sig\+Fig = 4}
+
+A format which is used to display output vectors with 4 sig figs. The number of sig figs printed in outputs. 

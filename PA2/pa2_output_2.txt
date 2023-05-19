@@ -1,0 +1,7 @@
+X X O X O O 
+X X O O X X 
+O X X O O O 
+X X X O X . 
+X X O O X X 
+O X O O O O 
+Player X: 18 cells; Player O: 17 cells

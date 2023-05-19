@@ -1,0 +1,125 @@
+\hypertarget{part__c_8cc}{}\doxysection{Part\+\_\+\+C/part\+\_\+c.cc File Reference}
+\label{part__c_8cc}\index{Part\_C/part\_c.cc@{Part\_C/part\_c.cc}}
+
+
+PA5 Part C\+: Finding closest point and it\textquotesingle{}s distance to a plane.  
+
+
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../float\+\_\+compare.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../get\+\_\+points.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../plane.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const Eigen\+::\+IOFormat \mbox{\hyperlink{part__c_8cc_a55184c0c61120166d09ecbdc99f0d0a3}{k\+Sig\+Fig\+Fmt}} (\mbox{\hyperlink{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}}, 0, \char`\"{}, \char`\"{}, \char`\"{} \char`\"{}, \char`\"{}\mbox{[}\char`\"{}, \char`\"{}\mbox{]}\char`\"{})
+\item 
+\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \mbox{\hyperlink{part__c_8cc_a383530ccc09a546b0300cf75f9a30c9b}{Generate\+Bisector\+Plane}} (const Eigen\+::\+Vector3d \&point\+\_\+1, const Eigen\+::\+Vector3d \&point\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Generates a 3D bisector plane given two points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{part__c_8cc_a0090d7b18fdff93c6ee299d3f8b49a1e}{Solve\+File}} (const std\+::string \&input\+\_\+path, const std\+::string \&output\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Solves a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{part__c_8cc_a38304980cbae1861ee59c8e92b46b96d}{Solve\+Row}} (const Input\+Points\+Row \&row, std\+::ofstream \&output\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Solves a row of the input file and prints the solutions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{part__c_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{part__c_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned int \mbox{\hyperlink{part__c_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}} = 4
+\item 
+\mbox{\Hypertarget{part__c_8cc_aee611356891b2478ec3a4ef9f865056c}\label{part__c_8cc_aee611356891b2478ec3a4ef9f865056c}} 
+const std\+::string \mbox{\hyperlink{part__c_8cc_aee611356891b2478ec3a4ef9f865056c}{k\+Invalid\+Computation\+Msg}} = \char`\"{}Invalid Computation\char`\"{}
+\begin{DoxyCompactList}\small\item\em Invalid computation message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PA5 Part C\+: Finding closest point and it\textquotesingle{}s distance to a plane. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Hartt (\href{mailto:jacobjhartt@gmail.com}{\texttt{ jacobjhartt@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05-\/08-\/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{part__c_8cc_a383530ccc09a546b0300cf75f9a30c9b}\label{part__c_8cc_a383530ccc09a546b0300cf75f9a30c9b}} 
+\index{part\_c.cc@{part\_c.cc}!GenerateBisectorPlane@{GenerateBisectorPlane}}
+\index{GenerateBisectorPlane@{GenerateBisectorPlane}!part\_c.cc@{part\_c.cc}}
+\doxysubsubsection{\texorpdfstring{GenerateBisectorPlane()}{GenerateBisectorPlane()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} Generate\+Bisector\+Plane (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{point\+\_\+1,  }\item[{const Eigen\+::\+Vector3d \&}]{point\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Generates a 3D bisector plane given two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+1} & the first point \\
+\hline
+{\em point\+\_\+2} & the second point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 3D point-\/normal form plane that bisects the two points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{part__c_8cc_a55184c0c61120166d09ecbdc99f0d0a3}\label{part__c_8cc_a55184c0c61120166d09ecbdc99f0d0a3}} 
+\index{part\_c.cc@{part\_c.cc}!kSigFigFmt@{kSigFigFmt}}
+\index{kSigFigFmt@{kSigFigFmt}!part\_c.cc@{part\_c.cc}}
+\doxysubsubsection{\texorpdfstring{kSigFigFmt()}{kSigFigFmt()}}
+{\footnotesize\ttfamily const Eigen\+::\+IOFormat k\+Sig\+Fig\+Fmt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{part__d_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}{k\+Sig\+Fig}}}]{,  }\item[{0}]{,  }\item[{\char`\"{}}]{,  }\item[{\char`\"{}}]{,  }\item[{\char`\"{} \char`\"{}}]{,  }\item[{\char`\"{}\char`\"{}}]{\mbox{[}\char`\"{}, \char`\"{}\mbox{]} }\end{DoxyParamCaption})}
+
+A format which is used to display output vectors with 4 sig figs. For reference\+: \href{https://eigen.tuxfamily.org/dox/structEigen_1_1IOFormat.html}{\texttt{ https\+://eigen.\+tuxfamily.\+org/dox/struct\+Eigen\+\_\+1\+\_\+1\+IOFormat.\+html}} \mbox{\Hypertarget{part__c_8cc_a0090d7b18fdff93c6ee299d3f8b49a1e}\label{part__c_8cc_a0090d7b18fdff93c6ee299d3f8b49a1e}} 
+\index{part\_c.cc@{part\_c.cc}!SolveFile@{SolveFile}}
+\index{SolveFile@{SolveFile}!part\_c.cc@{part\_c.cc}}
+\doxysubsubsection{\texorpdfstring{SolveFile()}{SolveFile()}}
+{\footnotesize\ttfamily void Solve\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+\_\+path,  }\item[{const std\+::string \&}]{output\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Solves a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+path} & the path of the input file \\
+\hline
+{\em output\+\_\+path} & the path of the output file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{part__c_8cc_a38304980cbae1861ee59c8e92b46b96d}\label{part__c_8cc_a38304980cbae1861ee59c8e92b46b96d}} 
+\index{part\_c.cc@{part\_c.cc}!SolveRow@{SolveRow}}
+\index{SolveRow@{SolveRow}!part\_c.cc@{part\_c.cc}}
+\doxysubsubsection{\texorpdfstring{SolveRow()}{SolveRow()}}
+{\footnotesize\ttfamily void Solve\+Row (\begin{DoxyParamCaption}\item[{const Input\+Points\+Row \&}]{row,  }\item[{std\+::ofstream \&}]{output\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Solves a row of the input file and prints the solutions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & the row to solve \\
+\hline
+{\em output\+\_\+file} & the output file to write the solutions to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{part__c_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}\label{part__c_8cc_a7ab6ee6798b22cbd6dc804594736dd4b}} 
+\index{part\_c.cc@{part\_c.cc}!kSigFig@{kSigFig}}
+\index{kSigFig@{kSigFig}!part\_c.cc@{part\_c.cc}}
+\doxysubsubsection{\texorpdfstring{kSigFig}{kSigFig}}
+{\footnotesize\ttfamily const unsigned int k\+Sig\+Fig = 4}
+
+A format which is used to display output vectors with 4 sig figs. The number of sig figs printed in outputs. 

@@ -1,0 +1,87 @@
+\hypertarget{linear__domination_8cc}{}\doxysection{linear\+\_\+domination.\+cc File Reference}
+\label{linear__domination_8cc}\index{linear\_domination.cc@{linear\_domination.cc}}
+
+
+CS2300 PA\+\_\+2 Linear Domination.  
+
+
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classParametricLine}{Parametric\+Line}}
+\begin{DoxyCompactList}\small\item\em Class containing the data and functionality of a parametric line. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classBoard}{Board}}
+\begin{DoxyCompactList}\small\item\em Class representing a square board that contains colored cells. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classGame}{Game}}
+\begin{DoxyCompactList}\small\item\em Class representing a game of Linear Domination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}\label{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}} 
+typedef Eigen\+::\+Vector2d \mbox{\hyperlink{linear__domination_8cc_af0a77974d8d5eff700c8e5d9fcb1b5d4}{Point}}
+\begin{DoxyCompactList}\small\item\em Vectord2d is being typedefed as Point to make point-\/vector calculations simpler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{linear__domination_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em The main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{linear__domination_8cc_a1354b6ec797f87ac1891a6842a24eb13}\label{linear__domination_8cc_a1354b6ec797f87ac1891a6842a24eb13}} 
+const double \mbox{\hyperlink{linear__domination_8cc_a1354b6ec797f87ac1891a6842a24eb13}{k\+Barycentric\+Midpoint}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em The barycentric coordinate which represents the midpoint of any parametric line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{linear__domination_8cc_ab653ab1a6aebdd974ceec82745f951b4}\label{linear__domination_8cc_ab653ab1a6aebdd974ceec82745f951b4}} 
+const double \mbox{\hyperlink{linear__domination_8cc_ab653ab1a6aebdd974ceec82745f951b4}{k\+Cell\+MidpointX}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em The x coordinate of a midpoint of a cell relative to the x value of the cell. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{linear__domination_8cc_acf384f982c37751c8c4384522024f587}\label{linear__domination_8cc_acf384f982c37751c8c4384522024f587}} 
+const double \mbox{\hyperlink{linear__domination_8cc_acf384f982c37751c8c4384522024f587}{k\+Cell\+MidpointY}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em The y coordinate of a midpoint of a cell relative to the y value of the cell. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{linear__domination_8cc_a4b7d06ce29cf3179d2ef1eed8caf2059}\label{linear__domination_8cc_a4b7d06ce29cf3179d2ef1eed8caf2059}} 
+const double \mbox{\hyperlink{linear__domination_8cc_a4b7d06ce29cf3179d2ef1eed8caf2059}{k\+Float\+Error\+Tolerance}} = 0.\+0000000000001
+\begin{DoxyCompactList}\small\item\em A tolerance to account for floating-\/point error in calculations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{linear__domination_8cc_aad33c7afc1a3c8601f8b1bef3bd48c1b}\label{linear__domination_8cc_aad33c7afc1a3c8601f8b1bef3bd48c1b}} 
+const char \mbox{\hyperlink{linear__domination_8cc_aad33c7afc1a3c8601f8b1bef3bd48c1b}{k\+Empty\+Cell}} = \textquotesingle{}.\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em A char which represents an empty cell. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{linear__domination_8cc_a194dafbb76279175669f0cf5fcc39ac6}\label{linear__domination_8cc_a194dafbb76279175669f0cf5fcc39ac6}} 
+const char \mbox{\hyperlink{linear__domination_8cc_a194dafbb76279175669f0cf5fcc39ac6}{k\+Black\+Cell}} = \textquotesingle{}X\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em A char which represents a black cell. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{linear__domination_8cc_a409f20b37c046e3266eba53eb80cc803}\label{linear__domination_8cc_a409f20b37c046e3266eba53eb80cc803}} 
+const char \mbox{\hyperlink{linear__domination_8cc_a409f20b37c046e3266eba53eb80cc803}{k\+White\+Cell}} = \textquotesingle{}O\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em A char which represents a white cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CS2300 PA\+\_\+2 Linear Domination. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Hartt (\href{mailto:jacobjhartt@gmail.com}{\texttt{ jacobjhartt@gmail.\+com}})
+\end{DoxyAuthor}
+A line drawing game where the player with the most cells wins! \begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02-\/27-\/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{linear__domination_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{linear__domination_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{linear\_domination.cc@{linear\_domination.cc}!main@{main}}
+\index{main@{main}!linear\_domination.cc@{linear\_domination.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main function. 
+
+\begin{DoxyReturn}{Returns}
+The exit value 
+\end{DoxyReturn}

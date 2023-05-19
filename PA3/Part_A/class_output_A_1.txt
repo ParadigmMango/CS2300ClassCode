@@ -1,0 +1,2 @@
+[-0.3333,   1.333]
+Only trivial solution exists

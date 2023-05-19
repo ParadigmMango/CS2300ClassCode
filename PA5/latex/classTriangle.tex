@@ -1,0 +1,95 @@
+\hypertarget{classTriangle}{}\doxysection{Triangle Class Reference}
+\label{classTriangle}\index{Triangle@{Triangle}}
+
+
+A class which tracks and contains various functionality for 3D triangles.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTriangle_a3e589817b5a84e85cffce6bd128edf10}{Triangle}} (Eigen\+::\+Vector3d point\+\_\+1, Eigen\+::\+Vector3d point\+\_\+2, Eigen\+::\+Vector3d point\+\_\+3)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classTriangle}{Triangle}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTriangle_a25439890d3ee5eb3dc913d85755d3325}{Is\+Point\+Inside}} (const Eigen\+::\+Vector3d \&point)
+\begin{DoxyCompactList}\small\item\em Determines if a point is inside of the triangle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTriangle_a229bcc3b88abe020327236671e61e32e}{Has\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether or not the triangle has non-\/zero area. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}} \& \mbox{\hyperlink{classTriangle_ad5f63dc5b8ec46de1a12360ddd03ab7b}{Get\+Plane}} ()
+\begin{DoxyCompactList}\small\item\em Get the Plane object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class which tracks and contains various functionality for 3D triangles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTriangle_a3e589817b5a84e85cffce6bd128edf10}\label{classTriangle_a3e589817b5a84e85cffce6bd128edf10}} 
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{Triangle()}{Triangle()}}
+{\footnotesize\ttfamily Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{point\+\_\+1,  }\item[{Eigen\+::\+Vector3d}]{point\+\_\+2,  }\item[{Eigen\+::\+Vector3d}]{point\+\_\+3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classTriangle}{Triangle}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+1} & the first corner of the triangle \\
+\hline
+{\em point\+\_\+2} & the second corner of the triangle \\
+\hline
+{\em point\+\_\+3} & the third corner of the triangle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTriangle_ad5f63dc5b8ec46de1a12360ddd03ab7b}\label{classTriangle_ad5f63dc5b8ec46de1a12360ddd03ab7b}} 
+\index{Triangle@{Triangle}!GetPlane@{GetPlane}}
+\index{GetPlane@{GetPlane}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{GetPlane()}{GetPlane()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPointNormalPlane}{Point\+Normal\+Plane}}\& Triangle\+::\+Get\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Plane object. 
+
+\begin{DoxyReturn}{Returns}
+the plane of the triangle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTriangle_a229bcc3b88abe020327236671e61e32e}\label{classTriangle_a229bcc3b88abe020327236671e61e32e}} 
+\index{Triangle@{Triangle}!HasArea@{HasArea}}
+\index{HasArea@{HasArea}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{HasArea()}{HasArea()}}
+{\footnotesize\ttfamily bool Triangle\+::\+Has\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether or not the triangle has non-\/zero area. 
+
+\begin{DoxyReturn}{Returns}
+whether or not the triangle has area 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTriangle_a25439890d3ee5eb3dc913d85755d3325}\label{classTriangle_a25439890d3ee5eb3dc913d85755d3325}} 
+\index{Triangle@{Triangle}!IsPointInside@{IsPointInside}}
+\index{IsPointInside@{IsPointInside}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{IsPointInside()}{IsPointInside()}}
+{\footnotesize\ttfamily bool Triangle\+::\+Is\+Point\+Inside (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines if a point is inside of the triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & the point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the point is inside the triangle 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Part\+\_\+\+D/\mbox{\hyperlink{part__d_8cc}{part\+\_\+d.\+cc}}\end{DoxyCompactItemize}
